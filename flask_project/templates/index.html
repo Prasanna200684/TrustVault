@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>TrustVault</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 96 96"><rect width="96" height="96" rx="26" fill="#2A0A4A"/><circle cx="35" cy="35" r="14" fill="none" stroke="#fff" stroke-width="4"/><path d="M52 49a22 22 0 0 1 22 22H52z" fill="none" stroke="#A100FF" stroke-width="4" stroke-linejoin="round"/><rect x="20" y="56" width="26" height="16" rx="6" fill="none" stroke="#fff" stroke-width="4"/></symbol></svg>
+
+<div id="login">
+<div class="left"><div class="brand"><svg><use href="#logo"/></svg>TrustVault</div>
+<h1>Secure sharing, smarter access.</h1>
+<p class="lead">Upload, share and manage confidential documents with role-based access and a verifiable audit trail.</p></div>
+<div class="right"><div class="form cardform">
+<div class="tabs" role="tablist"><button role="tab" id="t1" aria-selected="true">Sign in</button><button role="tab" id="t2" aria-selected="false">Register</button></div>
+<div id="ok" class="banner" hidden role="status"></div>
+<form id="af" novalidate></form>
+<p class="sess2"><i></i>Sessions are protected and every sign-in is logged.</p>
+</div></div></div>
+<div id="chk" hidden><div class="chk"><div class="spin"></div><h3>Securing your session</h3><ul id="cl"></ul></div></div>
+
+<div id="app" hidden>
+<aside id="side">
+<div class="ah"><div class="brand"><svg><use href="#logo"/></svg>TrustVault</div><button class="burger" id="b1" aria-label="Collapse menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+<nav id="nav" aria-label="Main"></nav>
+<div class="vault"><div class="ck"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div><div><b>Vault Protected</b><small>Your files stay secure</small></div></div>
+</aside>
+<div class="main">
+<div class="top"><button class="burger" id="b2" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="brand"><svg><use href="#logo"/></svg>TrustVault</div><div class="sp"></div><div class="sess"><i></i>Secure Session</div><button class="avb" id="av" aria-label="Profile and password">P</button><button class="btn sec sm" id="out">Log out</button></div>
+<div id="view" class="view"></div>
+</div></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
